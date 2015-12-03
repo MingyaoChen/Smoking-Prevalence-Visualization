@@ -1,0 +1,249 @@
+Country,Code,Gender,Y2000,Y2005,Y2010,Y2012
+Aruba,ABW,female,5,5,5,5
+Andorra,AND,female,31.6,30.2,28.8,28.4
+Afghanistan,AFG,female,5,5,5,5
+Angola,AGO,female,5,5,5,5
+Albania,ALB,female,11.6,10.1,8.7,8.2
+Arab World,ARB,female,5,5,5,5
+United Arab Emirates,ARE,female,5,5,5,5
+Argentina,ARG,female,34,27.7,22.4,20.8
+Armenia,ARM,female,2.6,2.2,1.8,1.7
+American Samoa,ASM,female,5,5,5,5
+Antigua and Barbuda,ATG,female,5,5,5,5
+Australia,AUS,female,22.8,19.1,15.8,14.7
+Austria,AUT,female,40.5,38.4,36.7,35.9
+Azerbaijan,AZE,female,0.6,0.5,0.5,0.4
+Burundi,BDI,female,5,5,5,5
+Belgium,BEL,female,24.3,22.7,21.3,20.9
+Benin,BEN,female,1.6,1.3,1.1,1.1
+Burkina Faso,BFA,female,8.6,6.9,5.5,5.1
+Bangladesh,BGD,female,6.3,3,1.4,1.1
+Bulgaria,BGR,female,42,36.4,32,30.4
+Bahrain,BHR,female,4.8,5.6,6.5,6.9
+"Bahamas, The",BHS,female,5,5,5,5
+Bosnia and Herzegovina,BIH,female,35.9,33.6,31.7,31.2
+Belarus,BLR,female,13.4,12.3,11.4,11
+Belize,BLZ,female,5,5,5,5
+Bermuda,BMU,female,5,5,5,5
+Bolivia,BOL,female,26.4,22.8,19.7,18.6
+Brazil,BRA,female,18.5,15.6,13.3,12.4
+Barbados,BRB,female,1.8,1.4,1.2,1.1
+Brunei Darussalam,BRN,female,5.1,4.3,3.6,3.4
+Bhutan,BTN,female,5,5,5,5
+Botswana,BWA,female,5,5,5,5
+Central African Republic,CAF,female,5,5,5,5
+Canada,CAN,female,26.5,20.4,15.8,14.2
+Central Europe and the Baltics,CEB,female,32.45032758,29.26766759,26.65499173,25.70746658
+Switzerland,CHE,female,26.1,23.8,21.7,20.9
+Channel Islands,CHI,female,,,,
+Chile,CHL,female,43.6,40.8,38.3,37.4
+China,CHN,female,3.5,2.8,2.2,2
+Cote d'Ivoire,CIV,female,,,,
+Cameroon,CMR,female,0.9,0.9,0.9,0.9
+"Congo, Rep.",COG,female,1.6,1.6,1.7,1.7
+Colombia,COL,female,10.6,8.8,7.4,6.9
+Comoros,COM,female,14,10.5,7.9,7.1
+Cabo Verde,CPV,female,5.9,4.9,4.1,3.9
+Costa Rica,CRI,female,14.1,11.7,9.8,9.2
+Caribbean small states,CSS,female,5,5,5,5
+Cuba,CUB,female,31.1,25.6,21.3,19.8
+Curacao,CUW,female,5,5,5,5
+Cayman Islands,CYM,female,5,5,5,5
+Cyprus,CYP,female,5,5,5,5
+Czech Republic,CZE,female,29.7,29.4,29.2,28.9
+Germany,DEU,female,30.4,29.6,29,28.7
+Djibouti,DJI,female,5,5,5,5
+Dominica,DMA,female,5,5,5,5
+Denmark,DNK,female,34.6,27,20.9,19
+Dominican Republic,DOM,female,15.2,12.9,10.9,10.3
+Algeria,DZA,female,5,5,5,5
+East Asia & Pacific (developing only),EAP,female,4.479849608,3.622983922,2.93337168,2.724767071
+East Asia & Pacific (all income levels),EAS,female,5.343699479,4.36691898,3.580359757,3.338814492
+Europe & Central Asia (developing only),ECA,female,17.04454742,15.17082495,13.56000855,12.94607429
+Europe & Central Asia (all income levels),ECS,female,24.64100531,22.99322724,21.56187705,20.98397759
+Ecuador,ECU,female,5.3,4.5,3.8,3.6
+"Egypt, Arab Rep.",EGY,female,1.2,0.8,0.5,0.4
+Euro area,EMU,female,27.88442188,26.74806857,25.73415226,25.31684374
+Eritrea,ERI,female,5,5,5,5
+Spain,ESP,female,32.3,30.4,28.6,28
+Estonia,EST,female,27.4,26.5,25.6,25.4
+Ethiopia,ETH,female,0.6,0.6,0.5,0.5
+European Union,EUU,female,29.39772844,27.26196915,25.46421431,24.77333571
+Fragile and conflict affected situations,FCS,female,5,5,5,5
+Finland,FIN,female,25.7,22.8,20.6,19.6
+Fiji,FJI,female,15.2,14.1,13.1,12.8
+France,FRA,female,27.8,26.8,26.2,25.8
+Faeroe Islands,FRO,female,5,5,5,5
+"Micronesia, Fed. Sts.",FSM,female,5,5,5,5
+Gabon,GAB,female,5,5,5,5
+United Kingdom,GBR,female,28.9,24.7,21.4,20.1
+Georgia,GEO,female,6.5,6.2,6,5.8
+Ghana,GHA,female,0.8,0.6,0.5,0.5
+Guinea,GIN,female,5,5,5,5
+"Gambia, The",GMB,female,5,5,5,5
+Guinea-Bissau,GNB,female,5,5,5,5
+Equatorial Guinea,GNQ,female,5,5,5,5
+Greece,GRC,female,42.4,38.6,35.2,34.2
+Grenada,GRD,female,5,5,5,5
+Greenland,GRL,female,5,5,5,5
+Guatemala,GTM,female,5,5,5,5
+Guam,GUM,female,5,5,5,5
+Guyana,GUY,female,5,5,5,5
+High income,HIC,female,23.98745172,21.83437299,19.9942965,19.29022463
+"Hong Kong SAR, China",HKG,female,5,5,5,5
+Honduras,HND,female,4.2,3.3,2.7,2.4
+Heavily indebted poor countries (HIPC),HPC,female,5,5,5,5
+Croatia,HRV,female,28,29.6,31.6,32.3
+Haiti,HTI,female,3.8,3.3,2.9,2.7
+Hungary,HUN,female,34.4,30.8,27.5,26.5
+Indonesia,IDN,female,6,5,4.2,4
+Isle of Man,IMN,female,5,5,5,5
+India,IND,female,7.3,4.6,2.9,2.4
+Not classified,INX,female,5,5,5,5
+Ireland,IRL,female,30.5,27.3,24.4,23.5
+"Iran, Islamic Rep.",IRN,female,5.8,2.9,1.5,1.1
+Iraq,IRQ,female,5,5,5,5
+Iceland,ISL,female,27.1,22.1,18.1,16.9
+Israel,ISR,female,22.8,21.6,20.4,20.1
+Italy,ITA,female,20.2,20.1,19.8,19.8
+Jamaica,JAM,female,8.9,7.8,6.7,6.4
+Jordan,JOR,female,7.7,8.5,9.5,10
+Japan,JPN,female,14.4,13,11.7,11.3
+Kazakhstan,KAZ,female,11.5,10.6,9.9,9.7
+Kenya,KEN,female,3,2.7,2.4,2.3
+Kyrgyz Republic,KGZ,female,4.8,4.4,3.9,3.8
+Cambodia,KHM,female,8.1,5.7,4,3.5
+Kiribati,KIR,female,51.1,47.1,43.7,42.6
+St. Kitts and Nevis,KNA,female,5,5,5,5
+"Korea, Rep.",KOR,female,5.6,5,4.6,4.4
+Kosovo,KSV,female,5,5,5,5
+Kuwait,KWT,female,5,5,5,5
+Latin America & Caribbean (developing only),LAC,female,15.30943919,12.67191178,10.57300194,9.79140261
+Lao PDR,LAO,female,20.7,15.7,11.9,10.7
+Lebanon,LBN,female,24.3,26.2,28.3,29.4
+Liberia,LBR,female,4.1,3.4,2.8,2.7
+Libya,LBY,female,5,5,5,5
+St. Lucia,LCA,female,5,5,5,5
+Latin America & Caribbean (all income levels),LCN,female,17.85493591,14.85478137,12.44049364,11.5724601
+Least developed countries: UN classification,LDC,female,8.079565661,5.574060997,4.026351256,3.626294936
+Low income,LIC,female,5,5,5,5
+Liechtenstein,LIE,female,5,5,5,5
+Sri Lanka,LKA,female,1.9,1.1,0.6,0.5
+Lower middle income,LMC,female,6.856667914,4.771699695,3.419789398,3.026808138
+Low & middle income,LMY,female,7.110469613,5.400752083,4.206570677,3.83396721
+Lesotho,LSO,female,0.6,0.5,0.5,0.4
+Lithuania,LTU,female,20.9,21.3,21.8,21.9
+Luxembourg,LUX,female,25.8,24.1,22.7,22.3
+Latvia,LVA,female,25,24.6,24.4,24.4
+"Macao SAR, China",MAC,female,5,5,5,5
+St. Martin (French part),MAF,female,5,5,5,5
+Morocco,MAR,female,4,2.8,1.9,1.7
+Monaco,MCO,female,5,5,5,5
+Moldova,MDA,female,5.5,5.4,5.4,5.4
+Madagascar,MDG,female,5,5,5,5
+Maldives,MDV,female,5,5,5,5
+Middle East & North Africa (all income levels),MEA,female,5,5,5,5
+Mexico,MEX,female,13.3,10.5,8.4,7.6
+Marshall Islands,MHL,female,5,5,5,5
+Middle income,MIC,female,7.103759809,5.39071275,4.1962504,3.821930189
+"Macedonia, FYR",MKD,female,5,5,5,5
+Mali,MLI,female,4.1,3.7,3.5,3.4
+Malta,MLT,female,26.9,24.3,22,21.5
+Myanmar,MMR,female,15.8,11.6,8.6,7.7
+Middle East & North Africa (developing only),MNA,female,5,5,5,5
+Montenegro,MNE,female,5,5,5,5
+Mongolia,MNG,female,9,7.5,6.3,5.8
+Northern Mariana Islands,MNP,female,5,5,5,5
+Mozambique,MOZ,female,7.6,6.9,6.4,6.2
+Mauritania,MRT,female,5.7,4.9,4.2,4
+Mauritius,MUS,female,4.8,4.2,3.7,3.5
+Malawi,MWI,female,9.7,8.2,7,6.6
+Malaysia,MYS,female,3.2,2.4,1.8,1.6
+North America,NAC,female,23.35216769,19.95045051,17.14742736,16.08555524
+Namibia,NAM,female,14.7,13.4,12.3,12
+New Caledonia,NCL,female,5,5,5,5
+Niger,NER,female,0.3,0.3,0.2,0.2
+Nigeria,NGA,female,2,1.6,1.3,1.2
+Nicaragua,NIC,female,5,5,5,5
+Netherlands,NLD,female,30.7,28.1,25.9,24.7
+High income: nonOECD,NOC,female,22.18762997,21.08853943,20.06629542,19.70703764
+Norway,NOR,female,41,33.4,27.1,24.9
+Nepal,NPL,female,34.3,23.5,16.1,13.9
+New Zealand,NZL,female,5,5,5,5
+High income: OECD,OEC,female,24.40467234,22.00726983,19.9773345,19.19143461
+OECD members,OED,female,23.23710564,20.70959085,18.56708663,17.72817153
+Oman,OMN,female,0.8,0.9,1,1
+Other small states,OSS,female,5,5,5,5
+Pakistan,PAK,female,8.4,5.9,4.2,3.6
+Panama,PAN,female,5.2,4.1,3.2,2.9
+Peru,PER,female,9.7,8.2,6.9,6.5
+Philippines,PHL,female,12.9,11.2,9.7,9.2
+Palau,PLW,female,5,5,5,5
+Papua New Guinea,PNG,female,5,5,5,5
+Poland,POL,female,37.9,32.2,27.7,26.1
+Puerto Rico,PRI,female,5,5,5,5
+"Korea, Dem. Rep.",PRK,female,5,5,5,5
+Portugal,PRT,female,15.7,14.9,14.2,14
+Paraguay,PRY,female,14.9,12,9.7,9
+Pacific island small states,PSS,female,5,5,5,5
+French Polynesia,PYF,female,5,5,5,5
+Qatar,QAT,female,5,5,5,5
+Romania,ROU,female,27.4,25.6,23.9,23.4
+Russian Federation,RUS,female,21.8,22.1,22.4,22.5
+Rwanda,RWA,female,6.7,6.3,5.8,5.7
+South Asia,SAS,female,7.671506346,4.82864389,3.072305672,2.564933594
+Saudi Arabia,SAU,female,3.5,3.3,3,3
+Sudan,SDN,female,5,5,5,5
+Senegal,SEN,female,1.4,1.1,0.9,0.8
+Singapore,SGP,female,5.8,5.5,5.3,5.2
+Solomon Islands,SLB,female,5,5,5,5
+Sierra Leone,SLE,female,20.9,17.2,14.4,13.4
+El Salvador,SLV,female,5,5,5,5
+San Marino,SMR,female,5,5,5,5
+Somalia,SOM,female,5,5,5,5
+Serbia,SRB,female,41.2,40.6,40.2,39.8
+Sub-Saharan Africa (developing only),SSA,female,4.236472308,3.554476199,2.985192345,2.813798521
+South Sudan,SSD,female,5,5,5,5
+Sub-Saharan Africa (all income levels),SSF,female,4.23783812,3.555727817,2.986340356,2.814849056
+Small states,SST,female,5,5,5,5
+Sao Tome and Principe,STP,female,5,5,5,5
+Suriname,SUR,female,5,5,5,5
+Slovak Republic,SVK,female,21.4,19.9,18.6,18.1
+Slovenia,SVN,female,22.6,21,19.5,18.9
+Sweden,SWE,female,34.6,29.1,24.5,23
+Swaziland,SWZ,female,3.2,2.8,2.5,2.4
+Sint Maarten (Dutch part),SXM,female,5,5,5,5
+Seychelles,SYC,female,11.2,10.3,9.5,9.2
+Syrian Arab Republic,SYR,female,5,5,5,5
+Turks and Caicos Islands,TCA,female,5,5,5,5
+Chad,TCD,female,5,5,5,5
+Togo,TGO,female,5,5,5,5
+Thailand,THA,female,3.1,2.8,2.5,2.4
+Tajikistan,TJK,female,5,5,5,5
+Turkmenistan,TKM,female,5,5,5,5
+Timor-Leste,TLS,female,5,5,5,5
+Tonga,TON,female,15.1,14.3,13.6,13.3
+Trinidad and Tobago,TTO,female,5,5,5,5
+Tunisia,TUN,female,5,5,5,5
+Turkey,TUR,female,19.7,16.7,14.4,13.5
+Tuvalu,TUV,female,5,5,5,5
+Tanzania,TZA,female,4.9,4.5,4.1,4
+Uganda,UGA,female,4.8,4,3.4,3.2
+Ukraine,UKR,female,15.9,15.1,14.6,14.4
+Upper middle income,UMC,female,7.345000327,6.005418841,4.997248515,4.660534546
+Uruguay,URY,female,36.7,29.6,24,22
+United States,USA,female,23,19.9,17.3,16.3
+Uzbekistan,UZB,female,1.5,1.5,1.4,1.3
+St. Vincent and the Grenadines,VCT,female,5,5,5,5
+"Venezuela, RB",VEN,female,5,5,5,5
+Virgin Islands (U.S.),VIR,female,5,5,5,5
+Vietnam,VNM,female,1.9,1.6,1.4,1.4
+Vanuatu,VUT,female,5,5,5,5
+West Bank and Gaza,PSE,female,5,5,5,5
+World,WLD,female,10.96552985,8.956311756,7.473226189,6.967913795
+Samoa,WSM,female,26,23.3,20.9,20.1
+"Yemen, Rep.",YEM,female,5,5,5,5
+South Africa,ZAF,female,12.5,10,8,7.4
+"Congo, Dem. Rep.",COD,female,5,5,5,5
+Zambia,ZMB,female,6.1,5.5,5,4.8
+Zimbabwe,ZWE,female,3.1,2.7,2.4,2.3

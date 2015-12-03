@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  .countries { fill: #cde; }
+  #map {
+    width: 900;
+    height: 450px;
+    border: 2px solid #cde;
+    margin-bottom: 5px;
+  }
+  .color-indice {
+    width: 70px;
+    border: 0px;
+  }
+  .menu {
+    margin-bottom: 5px;
+  }
+  #ex1Slider .slider-selection {
+  	background: #BABABA;
+  }
+  svg {
+    display: block;
+  }
+  #chart1 {
+    height: 450px;
+
+  }
+  #countryMenu {
+    margin-top:15px;
+  }
+
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><center>Smoking Prevelance Worldwide</center></h1>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-6">
+
+          <div class="btn-group menu">
+            <button type="button" class="btn btn-default dropdown-toggle btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Category <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:switchMale()">Male</a></li>
+              <li><a href="javascript:switchFemale()">Female</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="javascript:switchAll()">All</a></li>
+            </ul>
+          </div>
+
+          <div id='map'></div>
+          <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default color-indice" disabled="disabled" style="background:#98df8a">0 - 10</button>
+            <button type="button" class="btn btn-default color-indice" disabled="disabled" style="background:#ffbb78">10 - 20</button>
+            <button type="button" class="btn btn-default color-indice" disabled="disabled" style="background:#ff7f0e">20 - 30</button>
+            <button type="button" class="btn btn-default color-indice" disabled="disabled" style="background:#1f77b4">30 - 40</button>
+            <button type="button" class="btn btn-default color-indice" disabled="disabled" style="background:#d62728"> > 40</button>
+          </div>
+          <br><br>
+          <center><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="2000" data-slider-max="2015" data-slider-step="5" data-slider-value="12"/></center>
+        </div><!-- End of col-md-8-->
+        <div class="col-md-4">
+          <select id="countryMenu">
+          </select>
+          <div id="chart1" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+          </div>
+        </div>
+    </div><!--End of row-->
+  </div>
+
+
+</body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="./node_modules/bootstrap-slider/js/bootstrap-slider.js"></script>
+<script src="./nv.d3.min.js"></script>
+<link href="./nv.d3.min.css" rel="stylesheet" type="text/css"/>
+<link href="./node_modules/bootstrap-slider/css/bootstrap-slider.css" rel="stylesheet" type="text/css"/>
+<script>
+  // map showing  --------------------------------------------------------------
+  var width = 900;
+  var height = 500;
+
+  var projection = d3.geo.mercator()
+    .scale((width + 1) / 2 / Math.PI)
+    .translate([width / 2, height / 2])
+    .precision(.1);
+
+  var path = d3.geo.path().projection(projection);
+
+  var svg = d3.select("#map").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+  // Load the geo data
+  d3.json("./data/countries.topo.json", function(error, world) {
+    if (error) throw error;
+    svg.selectAll(".countries")
+      .data(topojson.feature(world, world.objects.countries).features)
+      .enter().append("path")
+      .attr("class", function(d) { return "countries " + d.id; })
+      .attr("d", path)
+  });
+
+  // data loading and viewing --------------------------------------------------
+  var female = new Array();
+  var male = new Array();
+
+  // Load the female smoking data
+  d3.csv("./female.csv", function(error, data){
+    if(error) throw error;
+    for(var i=0; i<data.length; i++){
+      female[i] = new Array();
+      female[i][0] = data[i].Country;
+      female[i][1] = data[i].Code;
+      female[i][2] = data[i].Gender;
+      female[i][3] = data[i].Y2000;
+      female[i][4] = data[i].Y2005;
+      female[i][5] = data[i].Y2010;
+      female[i][6] = data[i].Y2012;
+    }
+  });
+  // load the male smoking data
+
+  d3.csv("./male.csv", function(error, data){
+    if(error) throw error;
+    for(var i=0; i<data.length; i++){
+      male[i] = new Array();
+      male[i][0] = data[i].Country;
+      male[i][1] = data[i].Code;
+      male[i][2] = data[i].Gender;
+      male[i][3] = data[i].Y2000;
+      male[i][4] = data[i].Y2005;
+      male[i][5] = data[i].Y2010;
+      male[i][6] = data[i].Y2012;
+    }
+  });
+
+  // load world gdp data
+  var gdp = new Array();
+  d3.csv("./gdp.csv", function(error, data){
+    if(error) throw error;
+    for(var i = 0; i < data.length; i ++) {
+      gdp[i] = new Array();
+      gdp[i][0] = data[i].Country;
+      gdp[i][1] = data[i].Code;
+      gdp[i][2] = data[i].Y2000;
+      gdp[i][3] = data[i].Y2001;
+      gdp[i][4] = data[i].Y2002;
+      gdp[i][5] = data[i].Y2003;
+      gdp[i][6] = data[i].Y2004;
+      gdp[i][7] = data[i].Y2005;
+      gdp[i][8] = data[i].Y2006;
+      gdp[i][9] = data[i].Y2007;
+      gdp[i][10] = data[i].Y2008;
+      gdp[i][11] = data[i].Y2009;
+      gdp[i][12] = data[i].Y2010;
+      gdp[i][13] = data[i].Y2011;
+      gdp[i][14] = data[i].Y2012;
+    }
+    console.log(gdp);
+    for(var i = 0; i < gdp.length; i ++) {
+      $("#countryMenu").append('<option>' + gdp[i][0] + '</option>')
+    }
+  });
+
+  function translate(params) {
+    var value = parseInt(params);
+    if(value > 0 && value < 10) {
+      return "#98df8a";
+    } else if( value >= 10 && value < 20) {
+      return "#ffbb78";
+    } else if( value >= 20 && value < 30) {
+      return "#ff7f0e";
+    } else if(value >= 30 && value <40) {
+      return "#1f77b4";
+    } else {
+      return "#d62728";
+    }
+  }
+
+  var smoker = new Array();
+  var myslider = $('#ex1').slider()
+  function switchFemale() {
+    myslider.slider("refresh");
+    smoker = female;
+    updateColor("Y2000");
+  }
+
+  function switchMale() {
+    myslider.slider("refresh");
+    smoker = male;
+    updateColor("Y2000");
+  }
+
+  function switchAll() {
+    myslider.slider("refresh");
+    for(var i=0; i<male.length; i++){
+      smoker[i] = new Array();
+      smoker[i][0] = male[i][0];
+      smoker[i][1] = male[i][1];
+      smoker[i][2]= "";
+      smoker[i][3] = male[i][3] + female[i][3];
+      smoker[i][4] = male[i][4] + female[i][4];
+      smoker[i][5] = male[i][5] + female[i][5];
+      smoker[i][6] = male[i][6] + female[i][6];
+    }
+    updateColor("Y2000");
+  }
+
+
+  function updateColor(year) {
+    var index = 3;
+    if(year == "Y2000") {
+      index = 3;
+    } else if( year=="Y2005") {
+      index = 4;
+    } else if ( year == "Y2010") {
+      index = 5;
+    } else if (year == "Y2012") {
+      index = 6;
+    }
+    for(var i = 0; i < smoker.length; i ++) {
+      var country = smoker[i];
+      indic = '.' + country[1];
+      if(indic == '.') {
+        continue;
+      }
+      $(indic).css("fill", translate(country[index]));
+    }
+  }
+
+  // slider
+  $('#ex1').slider({
+  	formatter: function(value) {
+      if (value == 2015)
+        value = 2012;
+      updateColor("Y"+value);
+  		return 'Current value: ' + value;
+  	}
+  });
+
+  // add the line plus bar chart -----------------------------------------------
+  var testdata = [
+       {
+           "key" : "GDP, million" ,
+           "bar": true,
+           "values" : [
+           [ Math.round(new Date("2000-01-01 01:01:01:123").getTime()) , 0] ,
+           [ Math.round(new Date("2001-01-01 01:01:01:123").getTime()) , 0] ,
+           [ Math.round(new Date("2002-01-01 01:01:01:123").getTime()) , 0] ,
+           [ Math.round(new Date("2003-01-01 01:01:01:123").getTime()) , 0] ,
+           [ Math.round(new Date("2004-01-01 01:01:01:123").getTime()) , 0] ,
+           [ Math.round(new Date("2005-01-01 01:01:01:123").getTime()) , 0],
+           [ Math.round(new Date("2006-01-01 01:01:01:123").getTime()) , 0],
+           [ Math.round(new Date("2007-01-01 01:01:01:123").getTime()) , 0],
+           [ Math.round(new Date("2008-01-01 01:01:01:123").getTime()) , 0],
+           [ Math.round(new Date("2009-01-01 01:01:01:123").getTime()) , 0],
+           [ Math.round(new Date("2010-01-01 01:01:01:123").getTime()) , 0],
+           [ Math.round(new Date("2011-01-01 01:01:01:123").getTime()) , 0],
+           [ Math.round(new Date("2012-01-01 01:01:01:123").getTime()) , 0]]
+       },
+       {
+           "key" : "Smoking Prevelance, %" ,
+           "values" : [
+             [Math.round(new Date("2000-01-01 01:01:01:123").getTime()), 50] ,
+             [Math.round(new Date("2005-01-01 01:01:01:123").getTime()), 50] ,
+             [Math.round(new Date("2010-01-01 01:01:01:123").getTime()), 50] ,
+             [Math.round(new Date("2012-01-01 01:01:01:123").getTime()), 50] ]
+        }
+   ].map(function(series) {
+           series.values = series.values.map(function(d) { return {x: d[0], y: d[1] } });
+           return series;
+       });
+
+   var chart;
+   var chartData;
+
+   nv.addGraph(function() {
+       chart = nv.models.linePlusBarChart()
+           .margin({top: 50, right: 60, bottom: 30, left: 70})
+           .legendRightAxisHint(' [Using Right Axis]')
+           .color(d3.scale.category10().range());
+       chart.xAxis.tickFormat(function(d) {
+               return d3.time.format('%x')(new Date(d))
+           })
+           .showMaxMin(false);
+       chart.y1Axis.tickFormat(function(d) { return '$' + d3.format(',f')(d) });
+       chart.bars.forceY([0]).padData(false);
+       chart.x2Axis.tickFormat(function(d) {
+           return d3.time.format('%x')(new Date(d))
+       }).showMaxMin(false);
+
+       chartData = d3.select('#chart1 svg')
+           .datum(testdata)
+           .transition().duration(500).call(chart);
+       nv.utils.windowResize(chart.update);
+       chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+       return chart;
+   });
+
+   $("#countryMenu").change(function(){
+      var checkText=$("#countryMenu").find("option:selected").text();  //获取Select选择的Text
+      for(var i = 0; i < gdp.length; i ++) {
+        if(jQuery.inArray(checkText, gdp[i]) != -1) {
+          console.log(smoker);
+          testdata = [
+               {
+                   "key" : "GDP, million" ,
+                   "bar": true,
+                   "values" : [
+                   [ Math.round(new Date("2000-01-01 01:01:01:123").getTime()) , gdp[i][2]],
+                   [ Math.round(new Date("2001-01-01 01:01:01:123").getTime()) , gdp[i][3]],
+                   [ Math.round(new Date("2002-01-01 01:01:01:123").getTime()) , gdp[i][4]],
+                   [ Math.round(new Date("2003-01-01 01:01:01:123").getTime()) , gdp[i][5]],
+                   [ Math.round(new Date("2004-01-01 01:01:01:123").getTime()) , gdp[i][6]],
+                   [ Math.round(new Date("2005-01-01 01:01:01:123").getTime()) , gdp[i][7]],
+                   [ Math.round(new Date("2006-01-01 01:01:01:123").getTime()) , gdp[i][8]],
+                   [ Math.round(new Date("2007-01-01 01:01:01:123").getTime()) , gdp[i][9]],
+                   [ Math.round(new Date("2008-01-01 01:01:01:123").getTime()) , gdp[i][10]],
+                   [ Math.round(new Date("2009-01-01 01:01:01:123").getTime()) , gdp[i][11]],
+                   [ Math.round(new Date("2010-01-01 01:01:01:123").getTime()) , gdp[i][12]],
+                   [ Math.round(new Date("2011-01-01 01:01:01:123").getTime()) , gdp[i][13]],
+                   [ Math.round(new Date("2012-01-01 01:01:01:123").getTime()) , gdp[i][14]]]
+               },
+               {
+                   "key" : "Smoking Prevelance" ,
+                   "values" : [
+                     [Math.round(new Date("2000-01-01 01:01:01:123").getTime()), smoker[i][3]] ,
+                     [Math.round(new Date("2005-01-01 01:01:01:123").getTime()), 50] ,
+                     [Math.round(new Date("2010-01-01 01:01:01:123").getTime()), 50] ,
+                     [Math.round(new Date("2012-01-01 01:01:01:123").getTime()), 50] ]
+                }
+           ].map(function(series) {
+                   series.values = series.values.map(function(d) { return {x: d[0], y: d[1] } });
+                   return series;
+               });
+          d3.select('#chart1 svg').datum(testdata)
+                   .transition()
+                   .duration(500)
+                   .call(chart);
+          nv.utils.windowResize(chart.update);
+          break;
+        }
+      }
+   });
+
+</script>
