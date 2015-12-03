@@ -1,5 +1,5 @@
-# smoking-prevalence
-data visualization using d3.js
+# Smoking Prevalence
+Data visualization using d3.js
 The visualization contains two parts: one map, one line plus bar chart. 
 The map is used to show the smoking prevalence among countries among the world. 
 All the countries are put in five groups, represented by five colors separately. 
